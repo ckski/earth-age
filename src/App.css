@@ -106,6 +106,7 @@ body {
 
 .small-h2 {
   font-size: 20px;
+  padding-left: 4px;
 }
 
 .intro-pic {
@@ -151,4 +152,34 @@ body {
   background-color: rgba(0, 0, 0, 0);
   z-index: 1;
   pointer-events: none;
+}
+
+.card-top-left {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  margin: 10px;
+  white-space: pre-line;
+}
+
+.card-age-title {
+  margin: 4px;
+  padding-left: 6px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+div.card-body {
+  margin-top: 30px;
+}
+
+.card-body > p {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.card-body.tight > p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 15px;
 }

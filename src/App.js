@@ -5,38 +5,83 @@ import './App.css';
 const EARTH_LIFE_EXPECTANCY = 9600;
 const EARTH_CURRENT_AGE = 4600;
 
+// const ERA_DATA = [
+  
+//   // Precambrian
+//   {name: "Hadean",        color: [216,  53,  77], start: 0, end: 600},
+//   {name: "Archaen",       color: [237,  30, 145], start: 600, end: 2100},
+//   {name: "Proterozoic",   color: [240,  89, 120], start: 2100, end: 4058},
+  
+//   // # Phanerozoic
+
+//   // ## Paleozoic
+//   {name: "Cambrian",      color: [138, 170, 120], start: 4058, end: 4112},
+//   {name: "Ordovician",    color: [138, 170, 120], start: 4112, end: 4156},
+//   {name: "Silurian",      color: [138, 170, 120], start: 4156, end: 4184},
+//   {name: "Devonian",      color: [138, 170, 120], start: 4184, end: 4241},
+//   {name: "Carboniferous", color: [138, 170, 120], start: 4241, end: 4301}, // Can be divided into Mississippian and pennsylvanian
+//   // {name: "Carboniferous", color: [138, 170, 120], start: 0, end: 1000},
+//   {name: "Permian",       color: [138, 170, 120], start: 4301, end: 4349},
+  
+//   // ## Mesozoic
+//   {name: "Triassic",      color: [142,  82, 161], start: 4349, end: 4400},
+//   {name: "Jurassic",      color: [  0, 185, 231], start: 4400, end: 4455},
+//   {name: "Cretaceous",    color: [133, 200, 111], start: 4455, end: 4535},
+  
+//   // ## Cenozoic
+//   {name: "Paleocene",     color: [249, 168, 111], start: 4535, end: 4544},
+//   {name: "Eocene",        color: [249, 168, 111], start: 4544, end: 4566},
+//   {name: "Oligocene",     color: [249, 168, 111], start: 4566, end: 4577},
+  
+//   {name: "Neogene",       color: [255, 220,   1], start: 4577, end: 4597},
+  
+//   {name: "Pleistocene",   color: [255, 247, 154], start: 4597, end: 4599.98},
+//   {name: "Holocene",      color: [255, 247, 154], start: 4599.98, end: 4600.1},
+//   {name: "Future",        color: [240, 240, 240], start: 4600.1, end: EARTH_LIFE_EXPECTANCY}
+// ];
+
+// NEW Era data
 const ERA_DATA = [
   
   // Precambrian
   {name: "Hadean",        color: [216,  53,  77], start: 0, end: 600},
-  {name: "Archaen",       color: [237,  30, 145], start: 600, end: 2100},
-  {name: "Proterozoic",   color: [240,  89, 120], start: 2100, end: 4058},
+  {name: "Eoarchean",     color: [215,  12, 140], start: 600, end: 1000},
+  {name: "Paleoarchean",  color: [241,  102, 167], start: 1000, end: 1400},
+  {name: "Mesoarchean",   color: [242,  134, 174], start: 1400, end: 1800},
+  {name: "Neoarchean",    color: [246,  172, 196], start: 1800, end: 2100},
+
+  {name: "Paleoproterozoic",   color: [241,  102, 129], start: 2100, end: 3000},
+  {name: "Mesoproterozoic",   color: [251,  187, 125], start: 3000, end: 3600},
+  {name: "Neoproterozoic",   color: [252,  186, 97], start: 3600, end: 4058},
   
   // # Phanerozoic
 
   // ## Paleozoic
   {name: "Cambrian",      color: [138, 170, 120], start: 4058, end: 4112},
-  {name: "Ordovician",    color: [138, 170, 120], start: 4112, end: 4156},
-  {name: "Silurian",      color: [138, 170, 120], start: 4156, end: 4184},
-  {name: "Devonian",      color: [138, 170, 120], start: 4184, end: 4241},
-  {name: "Carboniferous", color: [138, 170, 120], start: 4241, end: 4301}, // Can be divided into Mississippian and pennsylvanian
+  {name: "Ordovician",    color: [0, 167, 142], start: 4112, end: 4156},
+  {name: "Silurian",      color: [178, 221, 202], start: 4156, end: 4184},
+  {name: "Devonian",      color: [206, 156, 90], start: 4184, end: 4241},
+  {name: "Carboniferous", color: [104, 174, 177], start: 4241, end: 4301}, // Can be divided into Mississippian and pennsylvanian
   // {name: "Carboniferous", color: [138, 170, 120], start: 0, end: 1000},
-  {name: "Permian",       color: [138, 170, 120], start: 4301, end: 4349},
+  {name: "Permian",       color: [231, 101, 73], start: 4301, end: 4349},
   
   // ## Mesozoic
-  {name: "Triassic",      color: [142,  82, 161], start: 4349, end: 4400},
-  {name: "Jurassic",      color: [  0, 185, 231], start: 4400, end: 4455},
-  {name: "Cretaceous",    color: [133, 200, 111], start: 4455, end: 4535},
+  {name: "Mesozoic",      color: [71,  199, 234], start: 4349, end: 4535},
+  // {name: "Triassic",      color: [142,  82, 161], start: 4349, end: 4400},
+  // {name: "Jurassic",      color: [  0, 185, 231], start: 4400, end: 4455},
+  // {name: "Cretaceous",    color: [133, 200, 111], start: 4455, end: 4535},
   
   // ## Cenozoic
-  {name: "Paleocene",     color: [249, 168, 111], start: 4535, end: 4544},
-  {name: "Eocene",        color: [249, 168, 111], start: 4544, end: 4566},
-  {name: "Oligocene",     color: [249, 168, 111], start: 4566, end: 4577},
+  {name: "Paleogene",     color: [249, 168, 111], start: 4535, end: 4577},
+  // {name: "Paleocene",     color: [249, 168, 111], start: 4535, end: 4544},
+  // {name: "Eocene",        color: [249, 168, 111], start: 4544, end: 4566},
+  // {name: "Oligocene",     color: [249, 168, 111], start: 4566, end: 4577},
   
-  {name: "Neogene",       color: [255, 220,   1], start: 4577, end: 4597},
+  {name: "Neogene",       color: [255, 221, 43], start: 4577, end: 4597},
   
-  {name: "Pleistocene",   color: [255, 247, 154], start: 4597, end: 4599.98},
-  {name: "Holocene",      color: [255, 247, 154], start: 4599.98, end: 4600.1},
+  // {name: "Pleistocene",   color: [255, 247, 154], start: 4597, end: 4599.98},
+  // {name: "Holocene",      color: [255, 247, 154], start: 4599.98, end: 4600.1},
+  {name: "Quarternary",      color: [255, 247, 154], start: 4597, end: 4600.1},
   {name: "Future",        color: [240, 240, 240], start: 4600.1, end: EARTH_LIFE_EXPECTANCY}
 ];
 
@@ -52,11 +97,11 @@ function getEarthData(age) {
   } else if (i < 1000) {
     return {n: 1, era: "Eoarchean", eon: "Archean", oxygen: 0};
   } else if (i < 1400) {
-    return {n: 1, era: "Paleoarchean", eon: "Archean", oxygen: 0};
+    return {n: 2, era: "Paleoarchean", eon: "Archean", oxygen: 0};
   } else if (i < 1800) {
-    return {n: 1, era: "Mesoarchean", eon: "Archean", oxygen: 0};
+    return {n: 3, era: "Mesoarchean", eon: "Archean", oxygen: 0};
   } else if (i < 2100) {
-    return {n: 1, era: "Neoarchean", eon: "Archean", oxygen: 0};
+    return {n: 4, era: "Neoarchean", eon: "Archean", oxygen: 0};
 // Proterozoic Eon
 // Paleoproterozoic Era
   } else if (i < 2280) {
@@ -74,7 +119,7 @@ function getEarthData(age) {
     } else if (i < 2280) {
       oxygen = 0.5;
     }
-    return {n: 2, period: "Siderian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 5, period: "Siderian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: oxygen};
   } else if (i < 2450) {
     var oxygen;
     if (i < 2298) {
@@ -100,7 +145,7 @@ function getEarthData(age) {
     } else if (i < 2450) {
       oxygen = 1.6;
     }
-    return {n: 2, period: "Rhyacian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 5, period: "Rhyacian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: oxygen};
   } else if (i < 2800) {
     var oxygen;
     if (i < 2462) {
@@ -146,12 +191,12 @@ function getEarthData(age) {
     } else if (i < 2800) {
       oxygen = 3.7;
     }
-    return {n: 2, period: "Orosirian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 5, period: "Orosirian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: oxygen};
   } else if (i < 3000) {
-    return {n: 2, period: "Statherian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: 3.8};
+    return {n: 5, period: "Statherian", era: "Paleoproterozoic", eon: "Proterozoic", oxygen: 3.8};
 // Mesoproterozoic Era
   } else if (i < 3200) {
-    return {n: 2, period: "Calymmian", era: "Mesoproterozoic", eon: "Proterozoic", oxygen: 3.8};
+    return {n: 6, period: "Calymmian", era: "Mesoproterozoic", eon: "Proterozoic", oxygen: 3.8};
   } else if (i < 3400) {
     var oxygen;
     if (i < 3249) {
@@ -159,7 +204,7 @@ function getEarthData(age) {
     } else if (i < 3400) {
       oxygen = 3.9;
     }
-    return {n: 2, period: "Ectasian", era: "Mesoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 6, period: "Ectasian", era: "Mesoproterozoic", eon: "Proterozoic", oxygen: oxygen};
   } else if (i < 3600) {
     var oxygen;
     if (i < 3561) {
@@ -167,7 +212,7 @@ function getEarthData(age) {
     } else if (i < 3600) {
       oxygen = 4;
     }
-    return {n: 2, period: "Stenian", era: "Mesoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 6, period: "Stenian", era: "Mesoproterozoic", eon: "Proterozoic", oxygen: oxygen};
 // Neoproterozoic Era
   } else if (i < 3750) {
     if (i < 3652) {
@@ -191,7 +236,7 @@ function getEarthData(age) {
     } else if (i < 3750) {
       oxygen = 5.1;
     }
-    return {n: 2, period: "Tonian", era: "Neoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 7, period: "Tonian", era: "Neoproterozoic", eon: "Proterozoic", oxygen: oxygen};
   } else if (i < 3970) {
     var oxygen;
     if (i < 3756) {
@@ -261,7 +306,7 @@ function getEarthData(age) {
     } else if (i < 3970) {
       oxygen = 14.1;
     }
-    return {n: 2, period: "Cryogenian", era: "Neoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 7, period: "Cryogenian", era: "Neoproterozoic", eon: "Proterozoic", oxygen: oxygen};
   } else if (i < 4058) {
     var oxygen;
     if (i < 3977) {
@@ -289,7 +334,7 @@ function getEarthData(age) {
     } else if (i < 4058) {
       oxygen = 16.4;
     }
-    return {n: 2, period: "Ediacaran", era: "Neoproterozoic", eon: "Proterozoic", oxygen: oxygen};
+    return {n: 7, period: "Ediacaran", era: "Neoproterozoic", eon: "Proterozoic", oxygen: oxygen};
 // Phanerozoic Eon
 // Paleozoic Era
   } else if (i < 4112) {
@@ -301,7 +346,7 @@ function getEarthData(age) {
     } else if (i < 4112) {
       oxygen = 16.7;
     }
-    return {n: 3, period: "Cambrian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 8, period: "Cambrian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4156) {
     var oxygen;
     if (i < 4126) {
@@ -317,7 +362,7 @@ function getEarthData(age) {
     } else if (i < 4156) {
       oxygen = 17.8;
     }
-    return {n: 4, period: "Ordovician", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 9, period: "Ordovician", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4184) {
     var oxygen;
     if (i < 4159) {
@@ -331,7 +376,7 @@ function getEarthData(age) {
     } else if (i < 4184) {
       oxygen = 19.9;
     }
-    return {n: 5, period: "Silurian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 10, period: "Silurian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4241) {
     var oxygen;
     if (i < 4185) {
@@ -355,7 +400,7 @@ function getEarthData(age) {
     } else if (i < 4241) {
       oxygen = 27.4;
     }
-    return {n: 6, period: "Devonian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 11, period: "Devonian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4282) {
     var oxygen;
     if (i < 4243) {
@@ -373,7 +418,7 @@ function getEarthData(age) {
     } else if (i < 4282) {
       oxygen = 32.1;
     }
-    return {n: 7, period: "Mississippian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 12, period: "Mississippian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4301) {
     var oxygen;
     if (i < 4289) {
@@ -383,7 +428,7 @@ function getEarthData(age) {
     } else if (i < 4301) {
       oxygen = 33.2;
     }
-    return {n: 7, period: "Pennsylvanian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 12, period: "Pennsylvanian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4349) {
     var oxygen;
     if (i < 4307) {
@@ -403,7 +448,7 @@ function getEarthData(age) {
     } else if (i < 4349) {
       oxygen = 26.4;
     }
-    return {n: 8, period: "Permian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 13, period: "Permian", era: "Paleozoic", eon: "Phanerozoic", oxygen: oxygen};
 // Mesozoic Era
   } else if (i < 4400) {
     var oxygen;
@@ -426,7 +471,7 @@ function getEarthData(age) {
     } else if (i < 4400) {
       oxygen = 20.6;
     }
-    return {n: 9, period: "Triassic", era: "Mesozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 14, period: "Triassic", era: "Mesozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4455) {
     var oxygen;
     if (i < 4406) {
@@ -442,7 +487,7 @@ function getEarthData(age) {
     } else if (i < 4455) {
       oxygen = 20.5;
     }
-    return {n: 10, period: "Jurassic", era: "Mesozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 14, period: "Jurassic", era: "Mesozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4535) {
     var oxygen;
     if (i < 4458) {
@@ -466,10 +511,10 @@ function getEarthData(age) {
     } else if (i < 4535) {
       oxygen = 22.7;
     }
-    return {n: 11, period: "Cretaceous", era: "Mesozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 14, period: "Cretaceous", era: "Mesozoic", eon: "Phanerozoic", oxygen: oxygen};
 // Cenozoic Era
   } else if (i < 4544) {
-    return {n: 12, epoch: "Paleocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 22.7};
+    return {n: 15, epoch: "Paleocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 22.7};
   } else if (i < 4566) {
     var oxygen;
     if (i < 4549) {
@@ -481,7 +526,7 @@ function getEarthData(age) {
     } else if (i < 4566) {
       oxygen = 22.1;
     }
-    return {n: 13, epoch: "Eocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 15, epoch: "Eocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4577) {
     var oxygen;
     if (i < 4569) {
@@ -491,7 +536,7 @@ function getEarthData(age) {
     } else if (i < 4577) {
       oxygen = 21.4;
     }
-    return {n: 14, epoch: "Oligocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 15, epoch: "Oligocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4595) {
     var oxygen;
     if (i < 4582) {
@@ -501,11 +546,11 @@ function getEarthData(age) {
     } else if (i < 4595) {
       oxygen = 21;
     }
-    return {n: 15, epoch: "Miocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: oxygen};
+    return {n: 16, epoch: "Miocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: oxygen};
   } else if (i < 4597) {
-    return {n: 15, epoch: "Pliocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 21};
+    return {n: 16, epoch: "Pliocene", period: "Tertiary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 21};
   } else if (i < 4599.98) {
-    return {n: 16, epoch: "Pleistocene", period: "Quarternary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 21};
+    return {n: 17, epoch: "Pleistocene", period: "Quarternary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 21};
   } else if (i <= 4600) {
     return {n: 17, epoch: "Holocene", period: "Quarternary", era: "Cenozoic", eon: "Phanerozoic", oxygen: 21};
   } else if (i < 4601) {
@@ -846,7 +891,7 @@ class AgeSlidersContainer extends Component {
   }
 
   updateCanvas() {
-    console.log('n', this.props.ageData.n);
+    // console.log('n', this.props.ageData.n);
     
     const data = ERA_DATA[this.props.ageData.n]
 
@@ -970,29 +1015,308 @@ class EraCenterCard extends Component {
     const oxygen = this.props.ageData.oxygen;
 
     let card_body;
-    
+    let eon_co2_level;
+    let eon_title;
+  
+    const era_i = this.props.eraIndex;
+    if (era_i == 0) {
+      // card_body = (
+      //   <div>
+      //   <p>During this age a human is born, learns to crawl, walk and run.</p>
+      //   <p>Earth is created and the Moon forms after a collision with a large asteroid.</p> 
+      //   <p>The oceanic crust cools from the molten Earth. Oceans accumulate and the first continental crust forms.</p>
+      //   <p>There is no oxygen and the atmosphere is choked with carbon dioxide. There is no ozone layer to block incoming UV radiation.</p>
+      //   </div>
+      // );
 
-    if (this.props.eraIndex == 0) {
+      // HADEAN EON
+      eon_title = 'Hadean Eon';
+
       card_body = (
-        <div>
-        <p>During this age a human is born, learns to crawl, walk and run.</p>
-        <p>Earth is created and the Moon forms after a collision with a large asteroid.</p> 
-        <p>The oceanic crust cools from the molten Earth. Oceans accumulate and the first continental crust forms.</p>
-        <p>There is no oxygen and the atmosphere is choked with carbon dioxide. There is no ozone layer to block incoming UV radiation.</p>
+      <div className='card-body'>
+        <p>Accretion of Earth</p>
+        <p>Moon: Collision with Theia to Form the Moon: 4510 million years ago</p>
+        <p>Following the collision Earth was a molten ocean of magma</p>
+        <p>Heavy bombardment: 4400 million years ago</p>
+        <p>First basaltic oceanic crust: About 4460 million years ago</p>
+        <p>First Oceans: 4400 - 4100 million years ago</p>
+        <p>First basaltic islands rise above the oceans 4290 million years ago</p>
+        <p>First stable continental crust: 4 billion years ago, by the end of the Hadean</p>
+        <p>Earth’s magnetic field 4000 million years ago, formed by crystallization of the inner core</p>
+      </div>
+      );
+      eon_co2_level =  '112,000ppm';
+    } else if (era_i == 1) {
+      
+      // ARCHEAN EON
+      // EOARCHEAN ERA
+      eon_title = 'Archean Eon\nEoarchean Era';
+      eon_co2_level = '106,000ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Late Heavy Bombardment by comets and asteroids: 4000-3800 years ago</p>
+          <p>First Life: LUCA, the Last Universal Common Ancestor: Probably >3800 million years ago.</p>
+          <p>The very oldest possible chemo microfossils are 3800 million years old. Calculations based on differences of genomes using the ‘molecular clock’ technique suggest that LUCA arose much earlier, possible right after the formation of the moon.</p>
+        </div>
+      );
+    } else if (era_i == 2) {
+
+      eon_title = 'Archean Eon\nPaleoarchean Era';
+      eon_co2_level = '96,000ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Plate Tectonics begins</p>
+          <p>Oldest biofossils</p>
+        </div>
+      );
+
+    } else if (era_i == 3) {
+      
+      // MESOARCHEAN ERA
+
+      eon_title = 'Archean Eon\nMesoarchean Era';
+      eon_co2_level = '81,000ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Beginning to develop continental stability: transient continental landmasses</p>
+        </div>
+      );
+    } else if (era_i == 4) {
+      // NEOARCHEAN ERA
+
+      eon_title = 'Archean Eon\nNeoarchean Era';
+      eon_co2_level = '56,000ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Formation of supercontinent, Kenorland or Superia</p>
+          <p>Oldest eukaryotic biomarkers: 2700 million years ago</p>
+          <p>Eukaryote cells have a nucleus enclosed with membranes and may be multicellular like plants and animals</p>
+        </div>
+      );
+
+    } else if (era_i == 5) {
+
+      // Proterozoic Eon
+      // Paleoproterozoic Era
+      
+      eon_title = 'Proterozoic Eon\nPaleoproterozoic Era';
+      eon_co2_level = '41,000ppm';
+
+      card_body = (
+        <div className='card-body tight' style={{'margin-top': 8}}>
+          <p>Free oxygen begins to be added to the atmosphere by photosynthesis</p>
+          <p>Oldest photosynthetic bacteria fossils mark the beginning of the Paleoproterozoic</p>
+          <p>Great Oxidation Event (GOE): Photosynthetic bacteria begin to add oxygen to the atmosphere</p>
+          <p>Banded Iron Formation as minerals on Earth oxidize, along with the formation of 3,000 new minerals form</p>
+          <p>Ozone layer forms creating a shield from sun's ultraviolet radiation</p>
+          <p>Oxygen Catastrophe: extinction of most anaerobic microbial life forms</p>
+          <p>Shunga Extinction Event, a mass extinction of microbial life: 2060 million years ago. Onwatin Extinction Event</p>
+          <p>Major asteroid impact events: Vredefort Impact: 2023 million years ago | Sudbury Impact: 1850 million years ago, forms Nickle deposits of Sudbury basin</p>
+          <p>Kenorland begins to break up and the supercontinent Columbia forms</p>
+          <p>Huronian Ice Age: First Snowball Earth</p>
+        </div>
+      );
+
+    } else if (era_i == 6) {
+      // Proterozoic Eon
+      // Mesoproterozoic Era
+
+      eon_title = 'Proterozoic Eon\nMesoproterozoic Era';
+      eon_co2_level = '6,000ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>The Boring Billion 1800-800 million years ago</p>
+          <p>Amalgamation of supercontinent, Rodinia</p>
+        </div>
+      );
+    } else if (era_i == 7) {
+      
+      // Proterozoic Eon
+      // Neoproterozoic Era
+    
+      eon_title = 'Proterozoic Eon\nNeoproterozoic Era';
+      eon_co2_level = '3,600ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Continued amalgamation and then breakup of supercontinent Rhodinia</p>
+          <p>Major period of atmospheric oxygenation</p>
+          <p>Neoproterozoic glaciations: Snowball Earth</p>
+          <p>Ediacaran biota: 635—542 million years ago: The earliest multicellular organisms</p>
+        </div>
+      );
+    } else if (era_i == 8) {
+
+      // Phanerozoic Eon
+      // Paleozoic Era
+      // Cambrian Period
+
+      eon_title = 'Phanerozoic Eon\nPaleozoic Era\nCambrian Period';
+      eon_co2_level = '3,600ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Cambrian Explosion: First animals to develop calcareous shells and for coral reefs.</p>
+          <p>Rapid evolutionary change among the chordates, brachiopods and chordates (ancestors of spiders, insects and crustaceans). Trilobites dominate.</p>
+          <p>All evidence of life is aquatic.</p>
+        </div>
+      );
+    } else if (era_i == 9) {
+      // Phanerozoic Eon
+      // Paleozoic Era
+      // Ordovician Period
+    
+      eon_title = 'Phanerozoic Eon\nPaleozoic Era\nOrdovician Period';
+      eon_co2_level = '4,900ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Abundance of marine invertebrates, diversity of life increased</p>
+          <p>First true fish appeared </p>
+          <p>Ordovician/Silurian extinction: wiped out 60% of marine genera</p>
+          <p>Tectonics: Gondwana continents assembled in the southern hemisphere</p>
+        </div>
+      );
+    } else if (era_i == 10) {
+
+      // Phanerozoic Eon
+      // Paleozoic Era
+      // Silurian Period
+
+      eon_title = 'Phanerozoic Eon\nPaleozoic Era\nSilurian Period';
+      eon_co2_level = '4,900ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Diversification of Fish, evolution of the first bony fish</p>
+          <p>First multicellular life on land—small vascular plants</p>
+        </div>
+      );
+    } else if (era_i == 11) {
+
+      // Phanerozoic Eon
+      // Paleozoic Era
+      // Devonian Period
+
+      eon_title = 'Phanerozoic Eon\nPaleozoic Era\nDevonian Period';
+      eon_co2_level = '4,700ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Age of Fish, The first ray-finned and lobe-finned fish, and the first land vertebrates, tetrapods (the ancestors to all four-limbed vertebrates)</p>
+          <p>First multicellular life on land—small vascular plants</p>
+          <p>Oxygen reaches its present level about 409 million years ago and then rises to 27.4% as plants thrive on land.</p>
+        </div>
+      );
+    } else if (era_i == 12) {
+
+      // Carboniferous Period
+
+      eon_title = 'Phanerozoic Eon\nPaleozoic Era\nCarboniferous Period';
+      eon_co2_level = '3,400ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Vast forests covered the land</p>
+          <p>Carboniferous Rainforest Collapse, Extinction at the end of the Carboniferous caused by intese glaciation</p>
+        </div>
+      );
+    } else if (era_i == 13) {
+
+      // Permian
+
+      eon_title = 'Phanerozoic Eon\nPaleozoic Era\nPermian Period';
+      eon_co2_level = '330ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Permian Mass Extinction—The Great Dying, wiped out 96% of species.</p>
+          <p>With the Carboniferous extinction, oxygen began to decline and carbon dioxide levels rose</p>
+          <p>Supercontinent Pangea formed</p>
+        </div>
+      );
+    } else if (era_i == 14) {
+
+      // Phanerozoic Eon
+      // Mesozoic Era
+
+      eon_title = 'Phanerozoic Eon\nMesozoic Era';
+      eon_co2_level = '570ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Dinosaurs, evolution of birds</p>
+          <p>Asteroid impact and mass extinction of dinosaurs. A shrew-like mammal survived.</p>
+          <p>Breakup of Pangea as continents move to their present position.</p>
+        </div>
+      );
+    } else if (era_i == 15) {
+      
+      // Phanerozoic Eon
+      // Cenozoic Era
+      // Paleogene Period
+
+      eon_title = 'Phanerozoic Eon\nCenozoic Era\nPaleogene Period';
+      eon_co2_level = '870ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Diversification of mammals</p>
+          <p>Continents continue to move to their present position. India collides with Asia forming the Himalayan Mountains. The Atlantic ocean continues to grow as North America and Europe separate.</p>
+        </div>
+      );
+    
+    } else if (era_i == 16) {
+
+      // Neogene
+
+      eon_title = 'Phanerozoic Eon\nCenozoic Era\nNeogene Period';
+      eon_co2_level = '270ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Mammals and birds continue to evolve, and early hominids, the ancestors of humans, appear</p>
+          <p>Global climate began to cool</p>
+        </div>
+      );
+    } else if (era_i == 17) {
+      //Quaternary
+
+      eon_title = 'Phanerozoic Eon\nCenozoic Era\nQuaternary Period';
+      eon_co2_level = '300ppm';
+
+      card_body = (
+        <div className='card-body'>
+          <p>Life: Homo sapiens evolved about 400,000 years ago and emerged as major geologic agents</p>
+          <p>Pleistocene Glaciations: Several pulses of glaciation from 2.58 million to 11,700 years ago</p>
+        </div>
+      );
+    } else {
+      // FUTURE
+
+      eon_title = 'Future';
+
+      card_body = (
+        <div className='card-body'>
+          <p>The Earth will endure for about another 5 billion years.</p>
         </div>
       );
     }
-
-    let eon_title = "";
-    if (eon_name) {
-      eon_title += `${eon_name} Eon`
+      
+    let corner_stats = (<p className='card-top-left'>Oxygen: {oxygen}% {'\nCarbon dioxide: ' + eon_co2_level}</p>);
+    if (era_i > 17) {
+      corner_stats = null;
     }
-
 
     return (
       <div className='ea-era-card-center' style={{width: 500, height: 400, left: 150, position: 'absolute', display: 'block'}}>
-        <h2>{eon_name} eon Eon: {eon_name} Era: {era_name}</h2>
-        <p>Oxygen: {oxygen}%</p>
+        <h2 className='card-age-title'>{eon_title}</h2>
+        {corner_stats}
 
         {card_body}
 
@@ -1032,11 +1356,11 @@ function render_card_label(n, age_data) {
   const era_name = `${age_data.name}`;
 
   let label_color = age_data.color;
-  if (n == 9) {
-    label_color = [206, 139, 227];
-  }
+  // if (n == 9) {
+  //   label_color = [206, 139, 227];
+  // }
   let size_class = '';
-  if (n == 7) {
+  if (era_name.length > 10) {
     size_class = 'small-h2';
   }
 
